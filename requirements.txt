@@ -1,0 +1,6 @@
+onnxruntime-gpu
+requests
+numpy
+pandas
+scenedetect[opencv]
+deepdanbooru-onnx
