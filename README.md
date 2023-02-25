@@ -1,15 +1,13 @@
-# SceneLabel
-Generate descriptions of scenes from video files.
+# ASL - AnimeSceneLabel
+Generate tags for the content of scenes in anime videos.
 
-It generates a thumbnail from each scene of the video, generates a description of the thumbnail content, and outputs to a .csv file.
-
-It currently only uses DeepDanbooru, so only works for anime content. I am hoping to also add support for CLIP interrogator.
+It generates a thumbnail from each scene of the video, uses DeepDanbooru to generate tags for the contents of each thumbnail, and outputs to a .csv file.
 
 ## Requirements
 `pip install -r requirements.txt`
 
 ## Usage
-`python scenelabel.py input -k`
+`python animescenelabel.py input -o output_folder -k`
 
 ```
 positional arguments:
@@ -17,5 +15,6 @@ positional arguments:
 
 options:
   -h, --help         show this help message and exit
+  -o, --output       specify a directory to save outputs to
   -k, --keep-thumbs  keep generated thumbnails in a folder named after each video file
   ```
