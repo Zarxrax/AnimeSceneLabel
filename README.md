@@ -3,20 +3,20 @@ Generate tags for the content of scenes in anime videos.
 <br>It generates a thumbnail from each scene of the video, uses DeepDanbooru to generate tags for the contents of each thumbnail, and outputs to a .csv file.
 
 ## Requirements
-`python (version 3.7 is probably the minimum version supported)`
+`Python` (version 3.7 is probably the minimum version supported)
 
-Install requirements by this command:
+Install requirements by downloading the requirements.txt file and running this command:
 <br>`pip install -r requirements.txt`
 
 ## Usage
-`python animescenelabel.py input -o output_folder -k`
+Download the animescenelabel.py file and run it as follows:
+<br>`python animescenelabel.py input -o output_folder -k`
 
 ```
 positional arguments:
   input              a video file or a folder containing video files
 
 options:
-  -h, --help         show this help message and exit
   -o, --output       specify a directory to save outputs to
   -k, --keep-thumbs  keep generated thumbnails in a folder named after each video file
   ```
