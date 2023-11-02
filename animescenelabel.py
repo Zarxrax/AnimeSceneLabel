@@ -29,7 +29,7 @@ def ProcessVideo(filename, tmpdirname):
         if not os.path.exists(opt.output):
             os.mkdir(opt.output)
         out_filename = os.path.join(opt.output, os.path.basename(filename))
-    subprocess.run(["scenedetect", "-i", filename, "detect-adaptive", "list-scenes", "-f", out_filename, "save-images", "-o", tmpdirname, "-n", "1", "-w", "512", "-h", "512"])
+    subprocess.run(["scenedetect", "-i", filename, "list-scenes", "-f", out_filename, "save-images", "-o", tmpdirname, "-n", "1", "-W", "512", "-W", "512"])
     csv = pd.read_csv(out_filename + ".csv", header=1, usecols=["Scene Number", "Start Frame", "Start Timecode"]) #read csv file
     csv["Booru Tags"] = "" #add extra column for tags
     csv = GetBooruTags(csv, tmpdirname)
